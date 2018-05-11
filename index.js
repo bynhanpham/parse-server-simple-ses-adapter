@@ -11,7 +11,8 @@ var SimpleSESAdapter = sesOptions => {
   }
   
   var client = ses.createClient({ key: sesOptions.apiKey, secret: sesOptions.apiSecret, amazon : sesOptions.amazon });
-
+  console.log("MAILTEXT is: ");
+  console.log(mail.text);
   var sendMail = mail => {
     var data = {
       to: mail.to,
